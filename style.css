@@ -1,0 +1,153 @@
+
+@font-face {
+    font-display: swap; 
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/outfit-v11-latin-300.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/outfit-v11-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap; 
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/outfit-v11-latin-600.woff2") format("woff2"); 
+}
+
+:root {
+    --color-soft-blue: hsl(215, 51%, 70%);
+    --color-cyan: hsl(178, 100%, 50%);
+    --color-dark-blue-main-bg: hsl(217, 50%, 11%);
+    --color-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --color-dark-blue-line: hsl(215, 32%, 27%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --color-font-hover:var(--color-cyan);
+    --padding: 1.5rem;
+    --overlay: var(--color-cyan);
+    --eye:  var(--color-white);
+
+    --bg-color: var(--color-dark-blue-main-bg);
+    --bg-color-card: var(--color-dark-blue-card-bg);
+    --f-color: var(--color-white);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-color);
+    display: grid;
+    place-content: center;
+    color: var(--f-color);
+    font-family: 'Outfit', system-ui, -apple-system,BlinkMacSystemFont;
+    font-size: 18px;
+}
+.wrapper {
+    width: 100%;
+    max-width: 350px;
+    padding: var(--padding);
+    border-radius: 1.5rem;
+    background-color: var(--bg-color-card);
+}
+.content__img{
+    width: 350px;
+    height: 350px;
+    position: relative;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.content__img .imgbg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    border-radius: .7rem;
+}
+.content__img .content__overlay{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--color-cyan);
+    opacity: 0;
+    border-radius: .7rem;
+}
+.content__img .content__overlay:hover{
+    opacity: .6;
+}
+.content__img .content__overlay .overlay__img-eye{
+    opacity: 1;
+}
+.content__text .content__h1{
+    font-weight: 600;
+    font-size: 1.9rem;
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+.content__text .content__h1:hover{
+    color: var(--color-cyan);
+}
+.content__text .content__para{
+    font-weight: 400;
+    opacity: .6;
+    margin-bottom: 2.1rem;
+}
+.content__info{
+    display: flex;
+    justify-content: space-between;
+}
+.content__img .price{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.content__info .content__h2 {
+    font-size: 1.1rem;
+    display: inline;
+    margin-left: 5px;
+    color: var(--color-cyan);
+}
+.content__info_time {
+    margin-bottom: 1rem;
+}
+.content__info_text{
+    opacity: .5;
+}
+
+.avatar{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.content__info_text {
+    font-size: 1.1rem;
+    display: inline;
+}
+.avatar__img{
+    width: 10%;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+}
+.avatar__text{
+    display: inline-flex;
+    line-height: 1.5;
+    margin-left: 1.1rem;
+    cursor: pointer;
+    font-weight: 300;
+}
+.avatar__text span:hover{
+    color: var(--color-cyan)
+}
